@@ -1,0 +1,39 @@
+def determine_robot_colors(i, config, condition,...,...):
+    # Determine body color based on condition
+    if condition:
+        body_color = colors[f"robot{i + 1}"]["body_color"]
+    else:
+        body_color = "gray"
+
+    # Determine antenna color based on the x-coordinate
+    if config["center_x"] >= my_th:
+        antenna_color = "purple"
+    else:
+        antenna_color = colors[f"robot{i + 1}"]["light_color"]
+
+    return body_color, antenna_color
+
+def draw_robot(i, canvas, config, colors, body_color, antenna_color):
+    constant_val = 0
+
+    # Draw the robot body
+    canvas.create_polygon(config['robot_points'], fill=body_color, tags='robot')
+
+    # Draw the antenna
+    canvas.create_oval(config["center_x"] - 0, config["center_y"] - 0, config["center_x"] + 0, config["center_y"] + 0, fill=antenna_color, tags='robot')
+
+    # Draw robot components
+    canvas.create_oval(config["wheel1_x"] - constant_val, config["wheel1_y"] - constant_val, config["wheel1_x"] + constant_val, config["wheel1_y"] + constant_val, fill=colors[f"robot{i + 1}"]["wheel_color_left"], tags='robot')
+    canvas.create_oval(config["wheel2_x"] - constant_val, config["wheel2_y"] - constant_val, config["wheel2_x"] + constant_val, config["wheel2_y"] + constant_val, fill=colors[f"robot{i + 1}"]["wheel_color_right"], tags='robot')
+    canvas.create_oval(config["sensor1_x"] - constant_val, config["sensor1_y"] - constant_val, config["sensor1_x"] + constant_val, config["sensor1_y"] + constant_val, fill=colors[f"robot{i + 1}"]["sensor_color"], tags='robot')
+    canvas.create_oval(config["sensor2_x"] - constant_val, config["sensor2_y"] - constant_val, config["sensor2_x"] + constant_val, config["sensor2_y"] + constant_val, fill=colors[f"robot{i + 1}"]["sensor_color"], tags='robot')
+
+    # Add text label next to the robot
+    text_x = config["center_x"] + 40
+    text_y = config["center_y"]
+    canvas.create_text(text_x, text_y, text=config["label"], anchor=tk.W)
+    make_print_status(config["label"])
+
+def create_robot(...,...., config, condition, colors, my_th):
+    body_color, antenna_color = determine_robot_colors(i, config, condition, colors, my_th)
+    draw_robot(i, canvas, config, colors, body_color, antenna_color)
