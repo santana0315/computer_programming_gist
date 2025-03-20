@@ -1,6 +1,6 @@
 # Add a variable to control the condition
 condition = True  # You can change this condition as needed
-# ad
+
 # Create robots using a loop
 for config in robot_configurations:
     # Access the corresponding color configuration using the robot's id
