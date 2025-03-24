@@ -1,7 +1,4 @@
 
-# In previous sessions, we've seen how to define variables one by one.
-
-
 ## positions for robot 1 components
 center_x1 = 327
 center_y1 = 505
