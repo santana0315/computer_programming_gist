@@ -1,0 +1,10 @@
+center_x2 = 627
+center_y2 = 505
+wheel1_x2 = 630.3
+wheel1_y2 = 534.8
+wheel2_x2 = 623.7
+wheel2_y2 = 475.2
+sensor1_x2 = 654.6
+sensor1_y2 = 481.8
+sensor2_x2 = 659.0
+sensor2_y2 = 521.6
