@@ -62,5 +62,9 @@ canvas.create_oval(sensor2_x1 - 3, sensor2_y1 - 3, sensor2_x1 + 3, sensor2_y1 + 
 
 ## Robot 2
 
+
+# Add text next to the robots
+
+
 # Main tkinter event loop
 root.mainloop()
