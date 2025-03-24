@@ -1,5 +1,5 @@
 import tkinter as tk
-# ket see if this works
+# ket see if this works: i delete the fas and add this
 # Create a tkinter window
 root = tk.Tk()
 root.title("Customizable Robots")
