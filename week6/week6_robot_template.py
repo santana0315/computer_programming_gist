@@ -39,7 +39,7 @@ class Bot:
 
 
     # TASK 2b: Adding the str Method to the Bot Class
-    # def str(self):
+    # def __str__(self):
 
 
 
@@ -74,7 +74,7 @@ def main():
 
     # print(robot_one.light_color)
 
-    # TASK 4a: Create a Second Robot Object - robot two
+    # TASK 4: Create a Second Robot Object - robot two
     # bot2 = registerBot("bot2",canvas)
     # bot2.draw(canvas)
 
