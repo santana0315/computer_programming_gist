@@ -16,6 +16,19 @@ class Bot:
         # TASK 1: Complete the Position and Shape Configuration .
         # Below is the incomplete version for the robot configuration.
         # You can complete the rest of the configuration by referring to the robot_data.json file.
+        # self.center_x = robot_configuration["?????"]
+        # self.????= robot_configuration["center_y"]
+        # self.wheel1_x = robot_configuration["?????"]
+        # self.wheel1_y = robot_configuration["?????"]
+        # self.wheel2_x = robot_configuration["?????"]
+        # self.wheel2_y = robot_configuration["?????"]
+        # self.????? = robot_configuration["sensor1_x"]
+        # self.?????= robot_configuration["sensor1_y"]
+        # self.????? = robot_configuration["sensor2_x"]
+        # self.sensor2_y = robot_configuration["sensor2_y"]
+        # self.robot_points = robot_configuration["robot_points"]
+        self.label = robot_configuration["label"]
+        self.canvas = canvasp
 
 
 
