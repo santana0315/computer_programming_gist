@@ -13,6 +13,11 @@ class Dirt:
         pass # Please remove this line when you start implementing the code
         # Paste the provided draw method here
 
+    # Activity 2
+    def get_location(self):
+        pass # Please remove this line when you start implementing the code
+
+
 # Activity 2
 class Charger():
     pass
@@ -31,9 +36,9 @@ def main():
 
     # For loop activity 1
     # for i in range(3):
-    #     dirt = Dirt(canvas, object_name="Dirt" + str(i), object_size=4)
+    #     dirt = Dirt(canvas, object_name="Dirt" + str(i), object_size=20)
     #     dirt.draw()
-    #     print(f"Location of {dirt.name}: {dirt.get_location()}")
+    #
 
     # For loop activity 2
 
