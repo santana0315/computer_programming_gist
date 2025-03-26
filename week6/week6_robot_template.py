@@ -60,7 +60,7 @@ def load_robot_data(filepath):
 
 def main():
     root, canvas = setup_application()
-    data = load_robot_data('robot_data.json')
+    data = load_robot_data('../helper/robot_data.json')
 
     robot_one = Bot(canvas,
                     color=data['colors']['robot1'],
