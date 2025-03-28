@@ -18,6 +18,7 @@ sensor_color = "gold"
 light_color = "yellow"
 body_color = "blue"
 
+constant_val=3
 # Define points to create the robot's shape
 ## Robot 1 point properties
 robot1_points = [
@@ -51,7 +52,7 @@ sensor2_y1 = 521.6
 
 ## Robot 1
 canvas.create_polygon(robot1_points, fill=body_color, tags='robot')
-canvas.create_oval(center_x1 - 8, center_y1 - 8, center_x1 + 8, center_y1 + 8, fill=light_color, tags='robot')
+canvas.create_oval(center_x1 - 50, center_y1 -50, center_x1 + 8, center_y1 + 8, fill=light_color, tags='robot')
 # Robot 1 wheel
 canvas.create_oval(wheel1_x1 - 50, wheel1_y1 - 20, wheel1_x1 + 20, wheel1_y1 + 20, fill=wheel_color_right, tags='robot')
 canvas.create_oval(wheel2_x1 - 20, wheel2_y1 - 20, wheel2_x1 + 20, wheel2_y1 + 20, fill=wheel_color_left, tags='robot')
