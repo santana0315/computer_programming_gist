@@ -7,7 +7,7 @@ from dynamic_component import RobotAgent
 from passive_component import Dirt, Counter, WiFiHub, Charger
 from helper.robot_helper import initialize_canvas, bot_clicked
 
-np.random.seed(0)
+
 class SimulationWindow:
     def __init__(self):
         self.root = tk.Tk()
