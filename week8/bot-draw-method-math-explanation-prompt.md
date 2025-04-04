@@ -1,0 +1,3 @@
+Explain the mathematical principles underlying the `draw` method of the Python `Bot` class provided below. Focus on how the code calculates the positions of the bot's body, sensors, and wheels. For each of these visual elements, break down the mathematical expressions used to determine their x and y coordinates, explaining the use of trigonometric functions (`np.sin`, `np.cos`), distances, and the impact of the bot's orientation (`self.theta`). Also explain the different use of the `math` module versus the `numpy` module for the trigonometric functions. Be sure to account for the coordinate system (where y increases downwards).
+
+[Paste the Python code here]

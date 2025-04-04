@@ -1,4 +1,8 @@
 import tkinter as tk
+a = 10
+b = a
+a = 3
+print(b)
 
 # Create a tkinter window
 root = tk.Tk()
@@ -12,7 +16,7 @@ canvas = tk.Canvas(root, width=1000, height=1000)
 canvas.pack()
 
 # Define colors for different parts of the robots
-wheel_color_left = "red"
+wheel_color_left = "red" # string
 wheel_color_right = "green"
 sensor_color = "gold"
 light_color = "yellow"
@@ -21,7 +25,8 @@ body_color = "blue"
 # Define points to create the robot's shape
 ## Robot 1 point properties
 robot1_points = [
-    293.9, 478.4,
+    293.9,          # numeric
+    478.4,
     300.4, 538.1,
     360.1, 531.6,
     353.6, 471.9,
