@@ -21,6 +21,7 @@ class Dirt:
 # Activity 2
 class Charger():
     pass
+
 # Activity 3
 class WiFiHub():
     pass
@@ -42,7 +43,7 @@ def main():
 
     # For loop activity 2
 
-    # Declration for WifiHub
+    # Declaration for WifiHub
 
 
     # root.mainloop()
