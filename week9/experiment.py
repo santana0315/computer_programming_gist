@@ -13,24 +13,7 @@ def run_multiple_trials(bot_counts, num_trials, max_moves):
     """
     Runs multiple trials per bot configuration.
     """
-    print("\n--- Running Multiple Trials per Configuration ---")
-
-    print("=" * 50 + "\nSimulation Experiment Suite\n" +
-          f"Bot Counts: {bot_counts}\n" +
-          f"Trials per Count: {num_trials}\n" +
-          f"Max Moves per Run: {max_moves}\n" +
-          "=" * 50)
-
-    for num_bots in bot_counts:
-        print(f"\n[Configuration] Testing with {num_bots} bot(s)...")
-        for trial_index in range(1, num_trials + 1):
-            collected_dirt = run_simulation(NUM_BOTS=num_bots, MAX_MOVES=max_moves)
-            print(f"[Trial] {num_bots} bot(s), Trial {trial_index}/{num_trials}: Collected {collected_dirt} dirt.")
-        print("-" * 50)
-
-    print("All experiments complete.")
-    print("=" * 50)
-
+    pass
 
 
 if __name__ == "__main__":  # main
