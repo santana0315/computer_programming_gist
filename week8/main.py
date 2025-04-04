@@ -52,32 +52,9 @@ def register_components(canvas, num_bots, num_dirt_patches, hub_locations):
 
 
 # ------------------------- ROBOT MOVEMENT FUNCTION -------------------------
-# Task 3
-def move_robots(canvas, bots, passive_components, dirt_counter, moves, max_moves, move_delay):
-    moves += 1
-    print(f'Move count: {moves}')
-
-    for bot in bots:
-        agent = RobotAgent(bot)
-        charger_intensity_left, charger_intensity_right = agent.sense_charger(passive_components)
-        agent.transfer_function(charger_intensity_left, charger_intensity_right)
-        agent.move(canvas, passive_components, dt=1.0)
-
-        # Update bot state from agent (more efficient way)
-        bot.x = agent.x
-        bot.y = agent.y
-        bot.theta = agent.theta
-        bot.battery = agent.battery
-        bot.sensor_positions = agent.sensor_positions
-
-        # Dirt collection
-        passive_components = agent.collect_dirt(canvas, passive_components, dirt_counter)
-
-    if moves > max_moves:
-        print(f"Total dirt collected after {max_moves} moves: {dirt_counter.dirt_collected}")
-        sys.exit()  # Or window.destroy() to close the window
-
-    canvas.after(move_delay, move_robots, canvas, bots, passive_components, dirt_counter, moves, max_moves, move_delay)
+# Task 3: import the move_robots
+def move_robots():
+    pass
 
 
 # ------------------------- MAIN FUNCTION -------------------------
@@ -96,7 +73,7 @@ def main():
     )
 
     # Task 3
-    # move_robots(canvas, bots, passive_components, dirt_counter, moves=0, max_moves=MAX_MOVES, move_delay=MOVE_DELAY_MS)
+    move_robots(canvas, bots, passive_components, dirt_counter, moves=0, max_moves=MAX_MOVES, move_delay=MOVE_DELAY_MS)
 
     window.mainloop()
 
