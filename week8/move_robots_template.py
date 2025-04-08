@@ -1,4 +1,4 @@
-def move_robots(canvas, bots, passive_components, dirt_counter, moves=0, max_moves=200000, move_delay=20):
+def move_robots(canvas, bots, passive_components, dirt_counter, moves, max_moves, move_delay,window):
     """
     Continuously updates the state and position of a swarm of robot agents on a canvas,
     simulating autonomous movement and dirt collection until a maximum number of moves is reached.
@@ -33,6 +33,9 @@ def move_robots(canvas, bots, passive_components, dirt_counter, moves=0, max_mov
         - `sys.exit()` is used to terminate the simulation; this can be replaced with
           `window.destroy()` if a clean GUI shutdown is desired.
     """
+    if window.should_stop:
+        return
+
     moves += 1
     print(f'Move count: {moves}')
 
@@ -54,6 +57,8 @@ def move_robots(canvas, bots, passive_components, dirt_counter, moves=0, max_mov
 
     if moves > max_moves:
         print(f"Total dirt collected after {max_moves} moves: {dirt_counter.dirt_collected}")
-        sys.exit()  # Or window.destroy() to close the window
+        # sys.exit()  # Or window.destroy() to close the window
+        window.should_stop = True
+        window.root.after(10,  window.root.destroy)  # Schedule window to close after this call finishes
 
-    canvas.after(move_delay, move_robots, canvas, bots, passive_components, dirt_counter, moves, max_moves, move_delay)
+    canvas.after(move_delay, move_robots, canvas, bots, passive_components, dirt_counter, moves, max_moves, move_delay,window)

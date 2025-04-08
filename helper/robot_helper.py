@@ -1,5 +1,9 @@
 import tkinter as tk
 
+class SimulationWindow:
+    def __init__(self):
+        self.root = tk.Tk()
+        self.should_stop = False
 # change here
 def initialize_canvas(window):
     window.resizable(False,False)

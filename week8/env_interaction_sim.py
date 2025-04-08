@@ -3,7 +3,7 @@ import tkinter as tk
 import numpy as np
 
 # Task 1
-from helper.robot_helper import initialize_canvas, bot_clicked
+from helper.robot_helper import initialize_canvas, bot_clicked, SimulationWindow
 
 # Task 3
 from active_component import Bot
@@ -58,25 +58,25 @@ def move_robots():
 
 
 # ------------------------- MAIN FUNCTION -------------------------
-def main():
+def run_simulation():
 
     NUM_BOTS = 30
     NUM_DIRT_PATCHES = 300
     HUB_LOCATIONS = [(950, 50), (50, 500)]
     MAX_MOVES = 200000
     MOVE_DELAY_MS = 20  # Time delay between moves (in milliseconds)
-    window = tk.Tk()
-    canvas = initialize_canvas(window)
+    sim = SimulationWindow()
+    canvas = initialize_canvas(sim.root)
 
     bots, passive_components, dirt_counter = register_components(
         canvas, NUM_BOTS, NUM_DIRT_PATCHES, HUB_LOCATIONS
     )
 
     # Task 3
-    move_robots(canvas, bots, passive_components, dirt_counter, moves=0, max_moves=MAX_MOVES, move_delay=MOVE_DELAY_MS)
+    move_robots(canvas, bots, passive_components, dirt_counter, 0, MAX_MOVES, MOVE_DELAY_MS,sim)
 
-    window.mainloop()
+    sim.root.mainloop()
 
 
 if __name__ == "__main__":
-    main()
+    run_simulation()
